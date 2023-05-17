@@ -14,32 +14,38 @@ def dinosaurioFavorito():
 
     print (resultado)
 
-def chistes():
+def frases_motivacionales():
 
-    chiste1 = ["crimenes de guerra", "protestas", "derechos para la gente con enanismo","piedras en los riñones"]
-    chiste2 = ["mi padre saliendo del closet", "la presidencia de Alberto Fernandes","una alta taza de mortalidad", "el colapso de las torres gemelas"]
-    luck = random.randint(0,len(chiste1)-1)
+    chiste1 = ["felicidad", "10 horas de sueño diario", "un mejor futuro","razones para despertar cada dia"]
+    chiste2 = ["peliculas de comedia", "un kilo de helado","tu amor", "el amor de tu vida"]
+    luck = random.randint(0,3)
     aa = chiste1[luck]
-    luck = random.randint(0,len(chiste2)-1)
+    luck = random.randint(0,3)
     bb = chiste2[luck]
     print ("no hay {}, sin {}".format(aa,bb))
 
-def nolose():
-    nolose = random.randint(0,1)
-    if (nolose == 0):
-        print("no lo se")
-    if (nolose == 1):
-        print("tampoco lo se")
+def dibujar_una_cara():
+    print("""
+   _____________
+  /         __  |
+ _|  ---   /  ' |
+(_    @)   (  @ |
+  |       _|     )
+  |     ___     |
+  |      _     /
+  |    ________)
+  |   |    /
+
+    """)
 
 #######################################################################################################################################
 
-def miNombreEs(text):
-    try:
-        text = str(text)
-        print ("mi nombre es:{}".format(text))
-
-    except ValueError:
-        text = "eso no es un nombre, mamahuevo"
+def repeat(max):
+    con = 0
+    while con < max:
+        "repeat no existe en python. Usa for i"
+        con+=1
+        
 
 def suma(num,num2):
     try:
@@ -88,7 +94,6 @@ def sumarSeis(num = 3, num2 = 3):
     try:
         num = int(num)
         num2 = int(num2)
-
         if (num + num2 == 6):
             print ("{} + {} = 6".format(num,num2))
         else:
@@ -96,26 +101,37 @@ def sumarSeis(num = 3, num2 = 3):
     except ValueError:
         print("esos no son numeros")
 
+
 def concatenarTexto(txt = "viva", txt2 = "la", txt3 = "pachanga"):
+    print ("{} {} {}".format(txt,txt2,txt3))
 
-    if ((type(txt)==str) and (type(txt2)==str) and (type(txt3)==str)):
-        print ("{} {} {}".format(txt,txt2,txt3))
-
-    else:
-        print("Valor ingresado no es el correcto")
 
 def nombreUsuario(txt = "Joe Doe"):
-
     if(type(txt)==str):
         print("Su nombre es {}".format(txt))
     else:
         print("Valor ingresado no es el correcto")
 
-def crearListaComida(txt = "fideos",txt2 = "hamburguesa",txt3 = "helado"):
-    listaComida = []
-    if ((type(txt)==str) and (type(txt2)==str) and (type(txt3)==str)):
 
-        return (listaComida[txt,txt2,txt3])
-    else:
-        print("Valor ingresado no es el correcto")
+def sumar_restar_concatenar(num,num2,fun=0):
+    match fun:
+        case 1:
+            print (num + num2)
+        case 2:
+            print (num - num2)
+        case 3:
+            print (str(num) + str(num2))
 
+
+def realizar_encuesta(preguntas = ["cual es tu partido politico?","que opiinas del cambio climatico?"],usuario = "anonimo"):
+    respuesta = []
+    for i in preguntas:
+        respuesta.append(input(i + ":    "))
+        
+    print("\n\n")
+
+    for i in range(0,len(preguntas)):
+        print (preguntas[i])
+        print (str(usuario) + " respondio: " + str(respuesta[i]))
+
+dibujar_una_cara()
