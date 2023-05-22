@@ -90,7 +90,7 @@ def multiplos():
 ######
 
 def tupla_inversa():
-    text = input("ingrese una lista de numeros enteros separados por coma: ")
+    text = input("ingrese una lista de numeros enteros separados por coma o por espacios: ")
     
     text = text.replace(","," ")
     
@@ -105,3 +105,39 @@ def tupla_inversa():
 ######
 ######
 
+
+def intercambiar_tupla(tupla1):
+    max = len(tupla1) - 1
+    lista = list(tupla1)
+
+    lista[max] = tupla1[0]
+    lista[0] = tupla1[max]
+    
+    print(tuple(lista))
+
+
+######
+######
+
+
+def encontrar_pares_impares(tupla1):
+    par = []
+    inpar = []
+
+    for i in tupla1:
+        if i % 2 == 0:
+            par.append(i)
+        else:
+            inpar.append(i)
+
+    print(f"""
+Numeros pares: {par}
+Numeros inpares: {inpar}
+    """)
+
+
+######
+######
+
+
+def 
