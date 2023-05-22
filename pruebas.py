@@ -4,4 +4,4 @@ dick = {
         "juan" : 3
         }
 
-print(dick[0][0])
+print(dick[0])
