@@ -1,5 +1,16 @@
 import os
 
+
+######
+"""
+Crea una tupla con los meses del año, pide números al usuario, si el numero esta entre 1 y la
+longitud máxima de la tupla, muestra el contenido de esa posición sino muestra un mensaje de
+error.
+El programa termina cuando el usuario introduce un cero.
+"""
+######
+
+
 def tuplas_meses():
     tupla_meses = ( "" , "enero" , "febrero" ,"marzo", "abril", "mayo" , "junio" , "julio" , "agosto" , "septiembre" , "octubre" , "noviembre" , "diciembre" )
 
@@ -20,7 +31,13 @@ def tuplas_meses():
 
 
 ######
+"""
+Crea una tupla con números, pide al usuario un número por teclado e indica cuantas veces se
+repite según lo halle en la tupla que has creado.
+RESUELVE validar los ingresos del usuario.
+"""
 ######
+
 
 def tupla_de_numeros():
     tupla_numeros = (1,1,4,4,4,2,3,3,3,3,5,5,6,7,7,7,7,8,8,9,9,9,9,9,10,11,12,12,12,12,12)
@@ -38,7 +55,11 @@ def tupla_de_numeros():
 
 
 ######
+"""
+Crea una tupla con números e indica el numero con mayor valor y el que menor tenga.
+"""
 ######
+
 
 def tupla_mayor_menor():
     tupla_mayor = (23,67,32,34,56,78,90,120,101,44,89,13,66,99,34,41,57,71,22,79,104,134,20,21,119,118)
@@ -53,6 +74,11 @@ def tupla_mayor_menor():
 
 
 ######
+"""
+Crea una tupla con valores ya predefinidos del 1 al 10, pide al usuario un índice por teclado y
+muestra los valores de la tupla.
+RESUELVE el caso en que no exista ese índice en la tupla.
+"""
 ######
 
 
@@ -69,24 +95,11 @@ def tupla_random():
 
 
 ######
-######
-
-
-def multiplos():
-
-    bup = [1,2,3,4,5,6,7,8,9,10]
-
-    for i in bup:
-        con = 1
-        msj = ""
-        for k in range(0,10):
-            msj = msj + f"{(con*i)}, "
-            con += 1
-
-        print (f"Tabla de {i} : " + msj)
-
-
-######
+"""
+Escribe un programa que solicite al usuario que ingrese una lista de números enteros.
+El programa debe crear una tupla a partir de la lista y luego imprimir la tupla en orden
+inverso.
+"""
 ######
 
 def tupla_inversa():
@@ -103,6 +116,12 @@ def tupla_inversa():
 
 
 ######
+"""
+Escribe una función llamada intercambiar_tupla que acepte una tupla como parámetro
+y devuelva una nueva tupla en la que el primer y el último elemento de la tupla
+original se intercambian. Por ejemplo, si la tupla original es (1, 2, 3, 4), la función
+debería devolver (4, 2, 3, 1).
+"""
 ######
 
 
@@ -117,6 +136,12 @@ def intercambiar_tupla(tupla1):
 
 
 ######
+"""
+Escribe una función llamada encontrar_pares_impares que acepte una tupla de
+números enteros como parámetro y devuelva una tupla que contenga dos listas: una
+lista de números pares y otra lista de números impares. Por ejemplo, si la tupla original
+es (1, 2, 3, 4, 5, 6, 7, 8, 9), la función debería devolver ([2, 4, 6, 8], [1, 3, 5, 7, 9]).
+"""
 ######
 
 
@@ -137,7 +162,26 @@ Numeros inpares: {inpar}
 
 
 ######
+"""
+Escribe un programa que solicite al usuario que ingrese una lista de nombres. El
+programa debe crear una tupla a partir de la lista y luego imprimir los nombres que
+comienzan con la letra 'A'.
+"""
 ######
 
 
-def 
+def filtrar_a (lista1):
+    tupla = tuple(lista1)
+    
+    for i in tupla:
+        if (i[0] == "A") or (i[0] == "a"):
+            print(i)
+
+
+######
+"""
+Escribe un programa que cree una tupla que contenga los primeros diez números de la
+serie de Fibonacci (1, 1, 2, 3, 5, 8, 13, 21, 34, 55) y luego imprima la tupla.
+"""
+######
+
