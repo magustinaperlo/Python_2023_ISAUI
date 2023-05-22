@@ -185,3 +185,44 @@ serie de Fibonacci (1, 1, 2, 3, 5, 8, 13, 21, 34, 55) y luego imprima la tupla.
 """
 ######
 
+
+def fibonacci ():
+    num = 1
+    tupla = [1,1]
+    for i in range(0,8):
+        
+        num = tupla[len(tupla) - 1] + tupla[len(tupla) - 2]
+        tupla.append(num)
+
+    print( tuple(tupla) )
+
+
+######
+"""
+Escribe un programa que reciba una tupla de colores y cree un diccionario donde cada
+elemento de la tupla tenga una clave numérica incremental, empezando en 1. Imprime
+la tupla de colores original y el diccionario resultante.
+"""
+######
+
+
+def colores_dic (tupla1):
+
+    dic = {}
+
+    for i in range(0,len(tupla1)):
+        dic[i+1] = tupla1[i]
+
+    print(tupla1)
+    print(dic)
+
+
+######
+"""
+Dado el diccionario dic_edades que contiene como llave el nombre de una persona y
+como valor su edad, escribe un programa que determine quién es la persona con
+mayor edad y lo imprima por pantalla.
+"""
+######
+
+
