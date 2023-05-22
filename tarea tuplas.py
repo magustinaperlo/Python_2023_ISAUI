@@ -84,3 +84,24 @@ def multiplos():
             con += 1
 
         print (f"Tabla de {i} : " + msj)
+
+
+######
+######
+
+def tupla_inversa():
+    text = input("ingrese una lista de numeros enteros separados por coma: ")
+    
+    text = text.replace(","," ")
+    
+    text = text.split()
+
+    tupla = tuple(text)
+
+    print(tupla)
+    print(type(tupla))
+
+
+######
+######
+
