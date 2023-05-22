@@ -4,4 +4,4 @@ dick = {
         "juan" : 3
         }
 
-print(dick[0])
+print(len(dick))

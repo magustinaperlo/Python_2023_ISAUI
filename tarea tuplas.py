@@ -226,12 +226,15 @@ mayor edad y lo imprima por pantalla.
 ######
 
 
-def mayor_edad(dick): #dick stands for dictionary Key xd
+def mayor_edad(dick): #dick stands for dictionary Key
 
-    may = dick[0]
+    may = "primero"
     name = ""
 
-    for i,k in dick:
+    for i,k in dick.items():
+        if may == "primero":
+            may = k
+
         if k > may:
             may = k
             name = i
@@ -240,4 +243,31 @@ def mayor_edad(dick): #dick stands for dictionary Key xd
 La persona con mayor edad es {name}, con {may} años.
     """)
 
-mayor_edad({"jorge":34 , "Lucas":66 , "Ivan":23 , "Eleazar":99})
+
+######
+"""
+Dado el diccionario dic_notas que contiene como llave el nombre de un estudiante y
+como valor su nota en un examen, escribe un programa que calcule el promedio de notas y genere una lista con los nombres de los estudiantes que aprobaron (nota
+mayor o igual a 7). Imprime por pantalla el promedio de notas y la lista de estudiantes
+aprobados.
+"""
+######
+
+
+def promedio_notas(dick1): #dick1 stands for dick 1
+
+    nota = 0
+    name = []
+
+    for i,k in dick1.items():
+
+        if k > 6:
+            nota += k
+            name.append(i)
+
+    print("El promedio es igual a " + str( nota / len(dick1) ))
+    msj = "Alumnos aprobados: "
+    for i in range(0,len(name)):
+        msj += name[i] + ", "
+    print(msj)
+
