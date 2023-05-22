@@ -226,3 +226,18 @@ mayor edad y lo imprima por pantalla.
 ######
 
 
+def mayor_edad(dick): #dick stands for dictionary Key xd
+
+    may = dick[0]
+    name = ""
+
+    for i,k in dick:
+        if k > may:
+            may = k
+            name = i
+    
+    print(f"""
+La persona con mayor edad es {name}, con {may} años.
+    """)
+
+mayor_edad({"jorge":34 , "Lucas":66 , "Ivan":23 , "Eleazar":99})
