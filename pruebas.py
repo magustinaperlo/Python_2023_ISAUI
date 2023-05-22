@@ -4,4 +4,6 @@ dick = {
         "juan" : 3
         }
 
-print(len(dick))
+dick["color"] = 7
+
+print(dick)
