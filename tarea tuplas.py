@@ -255,7 +255,7 @@ aprobados.
 
 
 def promedio_notas(dick1): #dick1 stands for dick 1
-
+#no mezclar idioma en  el nombramiento de las variables 
     nota = 0
     name = []
 
