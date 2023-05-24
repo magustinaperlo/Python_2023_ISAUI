@@ -123,6 +123,7 @@ Bienvenido al menu: elija una opcion
         else:
             for key in contactos:
                 msj += key + " : " + str(contactos[key]) + "\n"
+        print ("Lista de los contactos guardados:\n\n")
         print (msj)
         space = input("\nPrecione cualquier tecla para continuar:   ")
 
