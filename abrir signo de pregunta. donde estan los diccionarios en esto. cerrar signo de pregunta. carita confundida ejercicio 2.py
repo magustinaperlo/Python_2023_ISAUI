@@ -65,9 +65,8 @@ while 1:
 
             if con != len(lista):
                 msj += " , "
-            else:
-                msj += "."
 
+        suma = round(suma , 10)
         promedio = suma / con
         variansa = 0
         equis = 0
