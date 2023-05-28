@@ -11,6 +11,7 @@ El programa debe solicitar al usuario que ingrese la lista de números separados
 luego imprimir los resultados de los cálculos estadísticos.
 """
 
+import math
 import os
 
 while 1:
@@ -68,7 +69,7 @@ while 1:
                 msj += "."
 
         promedio = suma / con
-        desviacion = 0
+        variansa = 0
         equis = 0
 
         for num in lista:
@@ -77,7 +78,8 @@ while 1:
 
             equis = equis + round(resta**2 , 10)
         
-        desviacion = round(equis / con , 10)
+        variansa = round(equis / con , 10)
+        desviacion = math.sqrt(variansa)
 
         print (f"""
 
@@ -91,7 +93,7 @@ while 1:
     El mayor es {mayor}
     El menor es {menor}
 
-    La desviacion estandar es igual a {desviacion}
+    La variansa es igual a {variansa} y la desviacion estandar es igual a {desviacion}
     """)
 
         space = input("\n:    ")
