@@ -130,3 +130,19 @@ Bienvenido al menu: elija una opcion
     else:
         print ("Opcion fuera del menu\n\n")
         space = input(":    ")
+        
+        
+ '''correcciones: 
+La función repetir(texto) se define pero nunca se utiliza en el código.
+
+La línea num = input en la función repetir(texto) debería ser num = input() para llamar a la función input() y almacenar su resultado en la variable num.
+
+En la opción "2" del menú, la impresión de los detalles del contacto encontrado está dentro de un bucle for, pero solo debería imprimir una vez si se encuentra 
+el contacto correcto. Puedes agregar una variable booleana para rastrear si se encuentra el contacto y luego imprimir los detalles después del bucle.
+
+En la opción "3" del menú, la lógica para eliminar un contacto no es correcta. Si el contacto se encuentra en contactos, estás asignando el nombre del 
+contacto a la variable borrar, pero luego utilizas contactos.pop(borrar) para eliminar el contacto. Esto causará un error porque borrar contiene el nombre del contacto,
+no el elemento que se debe eliminar del diccionario. Puedes corregirlo usando -->  del contactos[borrar]     en su lugar.
+
+Y por ultimo, el nombre del archivo no sigue las convenciones de buenas prácticas vistas a comienzo de año. Atenti para los próximos desarrollos.   (0;   
+'''
